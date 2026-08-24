@@ -1,0 +1,6 @@
+{
+  "name": "dystiny-claim-source-preflight",
+  "private": true,
+  "type": "module",
+  "scripts": {"check": "node tests/check.mjs"}
+}

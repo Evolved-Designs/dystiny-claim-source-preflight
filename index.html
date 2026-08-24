@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claim-to-Source Research Preflight | Dystiny</title>
+  <meta name="description" content="Turn a broad claim into a source-aware research question before opening a visual Dystiny evidence path.">
+  <link rel="canonical" href="https://evolved-designs.github.io/dystiny-claim-source-preflight/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Claim-to-Source Research Preflight | Dystiny">
+  <meta property="og:description" content="Choose the evidence relationship you need, then open a calm, source-aware Dystiny research path.">
+  <meta property="og:url" content="https://evolved-designs.github.io/dystiny-claim-source-preflight/">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Dystiny Claim-to-Source Research Preflight",
+          "description": "A browser-private aid for turning a broad claim into a source-aware research question.",
+          "url": "https://evolved-designs.github.io/dystiny-claim-source-preflight/",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "isAccessibleForFree": true,
+          "creator": {"@type": "Organization", "name": "Dystiny", "url": "https://dystiny.com/"}
+        },
+        {
+          "@type": "ItemList",
+          "name": "Source-aware research question examples",
+          "numberOfItems": 3,
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Compare WCAG 2.2 with WCAG 2.1"},
+            {"@type": "ListItem", "position": 2, "name": "Identify evidence for an accessibility conformance claim"},
+            {"@type": "ListItem", "position": 3, "name": "Separate normative requirements from acquisition guidance"}
+          ]
+        }
+      ]
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="night">
+    <nav class="shell nav" aria-label="Primary">
+      <a class="brand" href="https://dystiny.com/?utm_source=github_pages&amp;utm_medium=owned_research&amp;utm_campaign=claim_source_preflight">Dystiny</a>
+      <span>Claim-to-source preflight</span>
+    </nav>
+    <div class="shell hero">
+      <p class="eyebrow">Source-aware research</p>
+      <h1>A claim is not a source trail.</h1>
+      <p>Decide whether you need a definition, comparison, applicability check, or evidence test. Then open the question as a visual Dystiny exploration instead of beginning with a blank prompt.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="principle shell" aria-labelledby="principle-title">
+      <div>
+        <p class="eyebrow">One useful distinction</p>
+        <h2 id="principle-title">Standard, rule, guidance, and evidence are different objects.</h2>
+      </div>
+      <div>
+        <p>W3C publishes WCAG as a technical standard. A rule or contract can reference a version and level. Acquisition guidance helps teams specify and validate work. Actual conformance still depends on evidence from the complete process—not the label alone.</p>
+        <div class="sources">
+          <a href="https://www.w3.org/TR/WCAG22/">W3C WCAG 2.2</a>
+          <a href="https://www.section508.gov/buy/">Section 508 buying guidance</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace shell" aria-label="Claim-to-source question builder">
+      <form class="card composer" data-builder>
+        <label for="claim"><strong>Claim or research starting point</strong><small>Optional. Keep private, personal, and sensitive information out.</small></label>
+        <textarea id="claim" maxlength="220" placeholder="Example: This website meets WCAG 2.2 Level AA"></textarea>
+
+        <fieldset>
+          <legend>What relationship should the evidence path explain?</legend>
+          <label><input type="radio" name="lens" value="define" checked><span><strong>Define the claim</strong><small>Clarify terms, version, scope, and what the statement does not establish.</small></span></label>
+          <label><input type="radio" name="lens" value="compare"><span><strong>Compare sources</strong><small>Show where two primary sources align, differ, or update one another.</small></span></label>
+          <label><input type="radio" name="lens" value="applicability"><span><strong>Check applicability</strong><small>Name the facts that determine whether a rule or standard applies.</small></span></label>
+          <label><input type="radio" name="lens" value="evidence"><span><strong>Test the evidence</strong><small>Identify what would support, weaken, or falsify the claim.</small></span></label>
+        </fieldset>
+        <p class="privacy">Nothing is saved or sent from this page. Dystiny receives the prepared question only after you deliberately open it.</p>
+      </form>
+
+      <aside class="card result" aria-live="polite">
+        <p class="eyebrow">Prepared research question</p>
+        <blockquote data-question>What does the claim mean, which terms and source versions control it, and what does the wording not establish?</blockquote>
+        <div class="actions">
+          <button type="button" class="button secondary" data-copy>Copy question</button>
+          <a class="button" data-open href="https://dystiny.com/answer/?q=What%20does%20the%20claim%20mean%2C%20which%20terms%20and%20source%20versions%20control%20it%2C%20and%20what%20does%20the%20wording%20not%20establish%3F&amp;utm_source=github_pages&amp;utm_medium=owned_research&amp;utm_campaign=claim_source_preflight&amp;utm_content=lens_define">Open this evidence path in Dystiny</a>
+        </div>
+        <p class="boundary">Dystiny helps explore evidence. It does not certify compliance or replace legal, medical, financial, or other professional judgment.</p>
+      </aside>
+    </section>
+
+    <section class="examples shell" aria-labelledby="examples-title">
+      <p class="eyebrow">Crawlable starting paths</p>
+      <h2 id="examples-title">Start with the exact relationship you need.</h2>
+      <div class="example-grid">
+        <a href="https://dystiny.com/answer/?q=What%20requirements%20did%20WCAG%202.2%20add%20to%20WCAG%202.1%2C%20and%20which%20parts%20of%20the%20earlier%20standard%20remain%20in%20force%3F&amp;utm_source=github_pages&amp;utm_medium=owned_research&amp;utm_campaign=claim_source_preflight&amp;utm_content=example_compare"><span>Compare versions</span><strong>WCAG 2.2 and 2.1</strong></a>
+        <a href="https://dystiny.com/answer/?q=What%20evidence%20would%20support%20or%20weaken%20a%20claim%20that%20a%20complete%20website%20process%20conforms%20to%20WCAG%202.2%20Level%20AA%3F&amp;utm_source=github_pages&amp;utm_medium=owned_research&amp;utm_campaign=claim_source_preflight&amp;utm_content=example_evidence"><span>Test a claim</span><strong>Conformance evidence</strong></a>
+        <a href="https://dystiny.com/answer/?q=How%20should%20a%20researcher%20separate%20normative%20web%20accessibility%20requirements%20from%20acquisition%20guidance%2C%20implementation%20techniques%2C%20and%20vendor%20claims%3F&amp;utm_source=github_pages&amp;utm_medium=owned_research&amp;utm_campaign=claim_source_preflight&amp;utm_content=example_source_roles"><span>Map source roles</span><strong>Requirement or guidance?</strong></a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="shell">Dystiny is a calm, visual, explorable knowledge product. Inspect primary sources before consequential decisions.</div></footer>
+</body>
+</html>
