@@ -56,12 +56,19 @@ blockquote { margin: 14px 0 28px; padding-left: 20px; border-left: 4px solid var
 .example-grid span, .example-grid strong { display: block; }
 .example-grid span { margin-bottom: 32px; color: var(--copper); font-size: .76rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
 .example-grid strong { font: 800 1.45rem/1.15 Georgia, "Times New Roman", serif; }
+.related { margin-bottom: 74px; padding: 34px; color: var(--white); background: var(--night-soft); }
+.related h2 { max-width: 700px; }
+.related > div { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.related a { padding: 18px; color: var(--white); border: 1px solid #5b708b; text-decoration: none; }
+.related strong, .related span { display: block; }
+.related span { margin-top: 4px; color: #c7d4e2; font-size: .9rem; }
 footer { padding-block: 28px; color: #cbd8e6; background: var(--night); font-size: .86rem; }
 
 @media (max-width: 800px) {
   .principle, .workspace { grid-template-columns: 1fr; }
   .result { position: static; }
   .example-grid { grid-template-columns: 1fr; }
+  .related > div { grid-template-columns: 1fr; }
   .example-grid a { min-height: 0; }
   .example-grid span { margin-bottom: 12px; }
 }
