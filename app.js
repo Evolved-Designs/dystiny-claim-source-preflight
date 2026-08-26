@@ -22,6 +22,20 @@ export function buildDystinyUrl(lens = 'define', claim = '') {
   return url.toString();
 }
 
+export function preparedQuestionText(lens = 'define', claim = '') {
+  return `Dystiny claim-to-source review\n\n${buildQuestion(lens, claim)}\n\nInspect primary sources before consequential decisions; this file is not a conformance certification.`;
+}
+
+export function downloadTextFile(filename, text) {
+  const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
 function init() {
   const form = document.querySelector('[data-builder]');
   if (!form) return;
@@ -30,6 +44,7 @@ function init() {
   const question = document.querySelector('[data-question]');
   const open = document.querySelector('[data-open]');
   const copy = document.querySelector('[data-copy]');
+  const download = document.querySelector('[data-download]');
   const lens = () => radios.find((radio) => radio.checked)?.value ?? 'define';
 
   function render() {
@@ -46,6 +61,11 @@ function init() {
   radios.forEach((radio) => radio.addEventListener('change', render));
   claim.addEventListener('input', render);
   copy.addEventListener('click', () => copyQuestion().catch(() => { copy.textContent = 'Copy unavailable'; }));
+  download.addEventListener('click', () => {
+    downloadTextFile('dystiny-claim-to-source-review.txt', preparedQuestionText(lens(), claim.value));
+    download.textContent = 'Review downloaded';
+    window.setTimeout(() => { download.textContent = 'Download claim review'; }, 1800);
+  });
   render();
 }
 
