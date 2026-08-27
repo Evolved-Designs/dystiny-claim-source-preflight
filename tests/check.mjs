@@ -16,8 +16,8 @@ assert.equal((html.match(/utm_content=example_/g) ?? []).length, 3);
 assert.match(html, /W3C WCAG 2\.2/);
 assert.match(html, /section508\.gov\/buy/);
 assert.match(html, /Nothing is saved or sent from this page/);
-assert.match(html, /dystiny-question-preflight/);
-assert.match(html, /dystiny-source-change-explorer/);
+assert.match(html, /dystiny\.com\/question-guide/);
+assert.match(html, /dystiny\.com\/research-paths\/replay/);
 assert.doesNotMatch(html + css, /clarity\.ms|Microsoft Clarity/i);
 assert.match(css, /prefers-reduced-motion/);
 
